@@ -57,7 +57,7 @@ export default function Home() {
                 <SelectContent>
                   <SelectItem value="digital-marketing">Digital Markedsføring</SelectItem>
                   <SelectItem value="business-consulting">Bedriftsrådgivning</SelectItem>
-                  <SelectItem value="website-development">Nettside Utvikling</SelectItem>
+                  <SelectItem value="website-development">Nettsideutvikling</SelectItem>
                   <SelectItem value="all-services">Alle Tjenester</SelectItem>
                 </SelectContent>
               </Select>
