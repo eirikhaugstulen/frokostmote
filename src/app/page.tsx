@@ -13,68 +13,68 @@ export default function Home() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    alert("Form submitted successfully!");
+    alert("Skjema sendt inn!");
   };
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white flex items-center justify-center p-6">
       <Card className="w-full max-w-md">
         <CardHeader className="text-center">
-          <CardTitle className="text-2xl">Contact Us</CardTitle>
+          <CardTitle className="text-2xl">Kontakt oss</CardTitle>
           <CardDescription>
-            Get in touch with our team
+            Ta kontakt med vårt team
           </CardDescription>
         </CardHeader>
 
         <CardContent>
           <form onSubmit={handleSubmit} className="space-y-4">
             <div className="space-y-2">
-              <Label htmlFor="name">Business Name *</Label>
+              <Label htmlFor="name">Bedriftsnavn *</Label>
               <Input
                 type="text"
                 id="name"
                 required
-                placeholder="Your business name"
+                placeholder="Ditt bedriftsnavn"
               />
             </div>
 
             <div className="space-y-2">
-              <Label htmlFor="email">Email Address *</Label>
+              <Label htmlFor="email">E-postadresse *</Label>
               <Input
                 type="email"
                 id="email"
                 required
-                placeholder="your@email.com"
+                placeholder="din@epost.no"
               />
             </div>
 
             <div className="space-y-2">
-              <Label htmlFor="service">Service Interest</Label>
+              <Label htmlFor="service">Tjeneste Interesse</Label>
               <Select value={selectedService} onValueChange={setSelectedService}>
                 <SelectTrigger>
-                  <SelectValue placeholder="Select a service" />
+                  <SelectValue placeholder="Velg en tjeneste" />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="digital-marketing">Digital Marketing</SelectItem>
-                  <SelectItem value="business-consulting">Business Consulting</SelectItem>
-                  <SelectItem value="website-development">Website Development</SelectItem>
-                  <SelectItem value="all-services">All Services</SelectItem>
+                  <SelectItem value="digital-marketing">Digital Markedsføring</SelectItem>
+                  <SelectItem value="business-consulting">Bedriftsrådgivning</SelectItem>
+                  <SelectItem value="website-development">Nettside Utvikling</SelectItem>
+                  <SelectItem value="all-services">Alle Tjenester</SelectItem>
                 </SelectContent>
               </Select>
             </div>
 
             <div className="space-y-2">
-              <Label htmlFor="message">Message *</Label>
+              <Label htmlFor="message">Melding *</Label>
               <Textarea
                 id="message"
                 rows={4}
                 required
-                placeholder="How can we help you?"
+                placeholder="Hvordan kan vi hjelpe deg?"
               />
             </div>
 
             <Button type="button" disabled className="w-full">
-              Send Message
+              Send Melding
             </Button>
           </form>
         </CardContent>
