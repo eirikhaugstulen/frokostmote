@@ -73,7 +73,7 @@ export default function Home() {
               />
             </div>
 
-            <Button type="button" disabled className="w-full">
+            <Button type="submit" className="w-full">
               Send Melding
             </Button>
           </form>
