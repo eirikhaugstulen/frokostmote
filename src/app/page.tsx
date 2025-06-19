@@ -10,10 +10,21 @@ import { useState } from "react"
 
 export default function Home() {
   const [selectedService, setSelectedService] = useState<string>("")
+  const [isSubmitting, setIsSubmitting] = useState(false)
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    alert("Skjema sendt inn!");
+    setIsSubmitting(true);
+    
+    // Simulate form submission
+    try {
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      alert("Skjema sendt inn!");
+    } catch {
+      alert("Det oppstod en feil. Prøv igjen.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -73,8 +84,8 @@ export default function Home() {
               />
             </div>
 
-            <Button type="button" disabled className="w-full">
-              Send Melding
+            <Button type="submit" className="w-full" disabled={isSubmitting}>
+              {isSubmitting ? "Sending..." : "Send Melding"}
             </Button>
           </form>
         </CardContent>
