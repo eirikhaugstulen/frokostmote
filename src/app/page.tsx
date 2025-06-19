@@ -12,7 +12,7 @@ export default function Home() {
   const [selectedService, setSelectedService] = useState<string>("")
   const [isSubmitting, setIsSubmitting] = useState(false)
 
-  const handleSubmit = async (e: any) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
     
